@@ -7,7 +7,7 @@ describe('makeChange()', function(){
     expect(makeChange).to.be.a('function')
   })
 
-  it('returns an object with all coin types (quarters, dimes, nickels, and pennies)', function(){
+  it('returns an array with all values from original array in order', function(){
     const change = makeChange({price: 100, amountGiven: 100})
     expect(change).to.be.an('object')
     expect(change).to.have.keys('quarters', 'dimes', 'nickels', 'pennies')
